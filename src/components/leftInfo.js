@@ -30,64 +30,7 @@ export class LeftInfo extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 @import url('../css/styles.css');
-
-                .carousel-wrapper {
-                    width: 80%;
-                    margin-bottom: 50px;
-                }
-
-                .carousel {
-                    position: relative;
-                    width: 100%;
-                    margin: auto;
-                    overflow: hidden;
-                }
-
-                .carousel-container {
-                    display: flex;
-                    transition: transform 0.5s ease;
-                }
-
-                .carousel-slide {
-                    min-width: 100%;
-                    box-sizing: border-box;
-                }
-
-                .carousel-slide img {
-                    width: 100%;
-                    vertical-align: middle;
-                }
-
-                .carousel-caption {
-                    position: absolute;
-                    bottom: 8px;
-                    left: 16px;
-                    color: #fff;
-                    padding: 10px;
-                }
-
-                .prev, .next {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background-color: rgba(0, 0, 0, 0.5);
-                    color: white;
-                    border: none;
-                    cursor: pointer;
-                    padding: 7px;
-                }
-
-                .prev {
-                    left: 0;
-                }
-
-                .next {
-                    right: 0;
-                }
-
-                .prev:hover, .next:hover {
-                    background-color: rgba(0, 0, 0, 0.8);
-                }
+                @import url('../css/styles_left.css');
             </style>
             <div class="left">
                 <h2>Bienvenido a Mi Banquito</h2>
