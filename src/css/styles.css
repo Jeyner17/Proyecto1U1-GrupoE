@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+.left {
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    flex: 1;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.right h2 {
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: #333;
+    text-align: center;
+}
+
+.right input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.right button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.right button:hover {
+    background-color: #e6b800;
+}
+
+.right a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.right a:hover {
+    text-decoration: underline;
+}
+
+.right .additional-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.right .additional-buttons button {
+    width: 48%;
+    font-size: 14px;
+}
+
+/* Styles for the carousel */
+.carousel-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 30%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: #fff;
+    padding: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
