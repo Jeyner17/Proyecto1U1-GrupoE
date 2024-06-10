@@ -7,7 +7,7 @@ export class RightLogin extends HTMLElement {
     connectedCallback() {
         this.shadowRoot.innerHTML = `
             <style>
-                @import url('styles.css');
+                @import url('../css/styles.css');
             </style>
             <div class="right">
                 <h2>Accede a tu cuenta</h2>

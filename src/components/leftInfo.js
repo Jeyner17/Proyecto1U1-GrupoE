@@ -29,7 +29,7 @@ export class LeftInfo extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <style>
-                @import url('styles.css');
+                @import url('../css/styles.css');
 
                 .carousel-wrapper {
                     width: 80%;
