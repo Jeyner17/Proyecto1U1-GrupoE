@@ -1,0 +1,98 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 20px; /* Ajusta el padding según sea necesario */
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 5px;
+    background-color: #f1f1f1; /* Añadir color de fondo para mejor visibilidad */
+  }
+  
+  #dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    color: #333;
+  }
+  
+  #dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #dropdown-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  #dropdown-menu.show {
+    transform: translateX(0);
+  }
+  
+  #close-menu {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+  }
+  
+  .access button {
+    background-color: #ffdd00;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Ajusta el padding para un mejor ajuste */
+    cursor: pointer;
+    color: #000000;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .access {
+      margin-top: 10px;
+    }
+  }
+  
