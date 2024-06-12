@@ -5,6 +5,7 @@ export class LeftInfo extends HTMLElement {
         this.currentSlide = 0;
         this.images = [];
         this.captions = [];
+        this.autoSlideInterval = null;
     }
 
     static get observedAttributes() {
@@ -26,6 +27,10 @@ export class LeftInfo extends HTMLElement {
         this.initializeCarousel();
     }
 
+    disconnectedCallback() {
+        clearInterval(this.autoSlideInterval); 
+    }
+
     render() {
         this.shadowRoot.innerHTML = `
             <style>
@@ -45,18 +50,15 @@ export class LeftInfo extends HTMLElement {
                                 </div>
                             `).join('')}
                         </div>
-                        <button class="prev" onclick="this.getRootNode().host.moveSlide(-1)">&#10094;</button>
-                        <button class="next" onclick="this.getRootNode().host.moveSlide(1)">&#10095;</button>
                     </div>
                 </div>
-                <p>Cuida tu usuario y contraseña.</p>
-                <p>Antes de ingresar verifica tus datos.</p>
             </div>
         `;
     }
 
     initializeCarousel() {
         this.showSlide(this.currentSlide);
+        this.startAutoSlide();
     }
 
     showSlide(index) {
@@ -74,7 +76,19 @@ export class LeftInfo extends HTMLElement {
 
     moveSlide(n) {
         this.showSlide(this.currentSlide + n);
+        this.resetAutoSlide(); 
+    }
+
+    startAutoSlide() {
+        this.autoSlideInterval = setInterval(() => {
+            this.moveSlide(1);
+        }, 3520); 
+    }
+
+    resetAutoSlide() {
+        clearInterval(this.autoSlideInterval);
+        this.startAutoSlide();
     }
 }
 
-customElements.define('left-info', LeftInfo);
+window.customElements.define('left-info', LeftInfo);

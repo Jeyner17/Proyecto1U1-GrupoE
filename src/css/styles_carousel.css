@@ -1,27 +1,28 @@
 .carousel {
     position: relative;
-    width: 100%;
-    margin: auto;
+    width: 60%;
+    margin: 50%;
     overflow: hidden;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.8s ease;
+    transition: transform 0.8s ease-in-out;
 }
 
 .carousel-slide {
-    min-width: 100%;
+    flex: 0 0 100%;
     overflow: hidden;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-slide img {
-    width: 10%;
-    display: block;
-    margin: auto;
+    width: 100%;
     max-width: 100%;
+    margin: 100%;
 }
 
 .carousel-caption {
@@ -29,28 +30,27 @@
     bottom: 8px;
     left: 16px;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     cursor: pointer;
-    padding: 7px;
+    padding: 10px;
+    z-index: 1;
 }
 
 .prev {
-    left: 0;
+    left: 5px;
 }
 
 .next {
-    right: 0;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    right: 5px;
 }
