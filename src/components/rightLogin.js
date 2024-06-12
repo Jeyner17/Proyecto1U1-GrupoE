@@ -5,7 +5,8 @@ export class RightLogin extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot.innerHTML = `
+        const template = document.createElement('template');
+        template.innerHTML = `
             <style>
                 @import url('../css/styles.css');
             </style>
@@ -22,7 +23,9 @@ export class RightLogin extends HTMLElement {
                 </div>
             </div>
         `;
+        this.shadowRoot.innerHTML = '';
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 }
 
-customElements.define('right-login', RightLogin);
+window.customElements.define('right-login', RightLogin);

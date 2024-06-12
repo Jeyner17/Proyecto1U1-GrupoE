@@ -17,5 +17,40 @@
         </div>
     </div>
 
+    <template id="left-info-template">
+        <style>
+            @import url('../css/styles.css');
+            @import url('../css/styles_left.css');
+        </style>
+        <div class="left">
+            <h2>Bienvenido a Mi Banquito</h2>
+            <p>Verifica en tu navegador que estás en Mi Banquito Web.</p>
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="carousel-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="right-login-template">
+        <style>
+            @import url('../css/styles.css');
+        </style>
+        <div class="right">
+            <h2>Accede a tu cuenta</h2>
+            <input type="text" placeholder="Usuario" id="user">
+            <input type="password" placeholder="Contraseña" id="password">
+            <button id="loginButton">Ingresar</button>
+            <a href="#">¿Olvidaste tu usuario?</a>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <div class="additional-buttons">
+                <button id="unlockButton">Desbloquea tu Banca Web</button>
+                <button id="registerButton">Regístrate a Banca Web</button>
+            </div>
+        </div>
+    </template>
+
 </body>
 </html>
