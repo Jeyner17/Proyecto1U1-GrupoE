@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Banquito</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles_card.css">
     <script type="module" src="../components/main.js"></script>
 </head>
 <body>
@@ -17,40 +18,93 @@
         </div>
     </div>
 
-    <template id="left-info-template">
-        <style>
-            @import url('../css/styles.css');
-            @import url('../css/styles_left.css');
-        </style>
-        <div class="left">
-            <h2>Bienvenido a Mi Banquito</h2>
-            <p>Verifica en tu navegador que estás en Mi Banquito Web.</p>
-            <div class="carousel-wrapper">
-                <div class="carousel">
-                    <div class="carousel-container">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </template>
+    <div class="container-body">
+        <template id="solucion-card-template">
+            <style>
+                :host {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
 
-    <template id="right-login-template">
-        <style>
-            @import url('../css/styles.css');
-        </style>
-        <div class="right">
-            <h2>Accede a tu cuenta</h2>
-            <input type="text" placeholder="Usuario" id="user">
-            <input type="password" placeholder="Contraseña" id="password">
-            <button id="loginButton">Ingresar</button>
-            <a href="#">¿Olvidaste tu usuario?</a>
-            <a href="#">¿Olvidaste tu contraseña?</a>
-            <div class="additional-buttons">
-                <button id="unlockButton">Desbloquea tu Banca Web</button>
-                <button id="registerButton">Regístrate a Banca Web</button>
+                .card {
+                    background-color: #ffffffbb;
+                    border: 1px solid #dee3ed;
+                    border-radius: 8px;
+                    width: 180px;
+                    height: 400px;
+                    padding: 24px;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-bottom: 16px;
+                }
+
+                .card img {
+                    width: 178px;
+                    height: 190px;
+                    margin-bottom: 10px;
+                }
+
+                .card-title {
+                    color: #2c2c30;
+                    font-family: "prelo-semibold";
+                    font-size: 18px;
+                    margin-bottom: 10px;
+
+                }
+
+                .card-description {
+                    font-size: 16px;
+                    color: #6e6e73;
+                    margin-bottom: 10px;
+                    font-family: "prelo-medium";
+                    font-style: normal;
+                }
+
+                
+            </style>
+            <div class="card">
+                <img src="" alt="">
+                <div class="card-nombre"></div>
+                <br>
+                <div class="card-correo"></div>
+                <br>
+                <div class="card-area_conocimiento"></div>
+                <br>
+                <div class="card-description"></div>
             </div>
+        </template>
+
+        <div class="container-card">
+            <div class="title">
+                <h3>Equipo de Soporte Técnico</h3>
+            </div>
+            <div class="carousel-card">
+                <solucion-card 
+                    background-color="#f5f5f5"
+                    img="../assets/img/Jeyner.png" 
+                    nombre="Jeyner Manzaba" 
+                    correo="jomanzaba@espe.edu.ec"   
+                    area="Desarrollo de Software"
+                    descripcion="Creador de toda la página web">
+
+                </solucion-card>
+                
+                
+                <solucion-card 
+                    img="../assets/img/Mario.png" 
+                    nombre="Mario Pazmiño" 
+                    correo="mrpazmino2@espe.edu.ec"   
+                    area="Administrador de la Base de Datos"
+                    descripcion="Responsable de la gestión, mantenimiento y optimización de la base de datos de la empresa">
+                </solucion-card>
+                </div>
+            
         </div>
-    </template>
+    </div>
+
+
+
+
 
 </body>
 </html>

@@ -32,8 +32,7 @@ export class LeftInfo extends HTMLElement {
     }
 
     render() {
-        const template = document.createElement('template');
-        template.innerHTML = `
+        this.shadowRoot.innerHTML = `
             <style>
                 @import url('../css/styles.css');
                 @import url('../css/styles_left.css');
@@ -55,8 +54,6 @@ export class LeftInfo extends HTMLElement {
                 </div>
             </div>
         `;
-        this.shadowRoot.innerHTML = '';
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     initializeCarousel() {
