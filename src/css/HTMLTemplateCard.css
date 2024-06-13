@@ -1,0 +1,119 @@
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #dee3ed;
+    border-radius: 8px;
+    width: 155px;
+    height: 180px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.5s;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+
+  .card img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    color: #2c2c30;
+    font-family: "prelo-semibold";
+
+    font-size: 18px;
+    margin-bottom: 10px;
+
+  }
+
+  .card-description {
+    font-size: 16px;
+    color: #6e6e73;
+    margin-bottom: 10px;
+    font-family: "prelo-medium";
+    font-style: normal;
+  }
+
+  .card-link {
+    font-size: 14px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .card-link:hover {
+    text-decoration: underline;
+  }
+
+  
+.container-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0f265c;
+    font-family: "preloslab-book";
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-card {
+    display: flex;
+    overflow-x: hidden;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .carousel-controls .control {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #747477;
+    margin: 0 10px;
+  }
+  
+  .carousel-controls .control:hover {
+    color: #3d3d3d;
+  }
+  

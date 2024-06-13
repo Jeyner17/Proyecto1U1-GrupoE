@@ -1,63 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Navigation Menu</title>
-    <link rel="stylesheet" href="../css/home.css" />
-  </head>
 
-  <body>
-    <nav>
-      <!--Inicio: Custom Element (Menu) -->
-      <header-container
-        access-button-text="Clientes"
-        logo-src="../assets/img/logo.png"
-        menu-items='["Inicio", "Servicios", "Contacto", "Sobre Nosotros"]'
-      >
-      </header-container>
-      <!--Fin: Custom Element (Menu) -->
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Navigation Menu</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/HTMLTemplateCard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-    <main>
-      <!--Inicio: HTML Template (Carrusel) -->
-      <template id="carousel-template">
-        <style>
-          @import url("../css/home.css");
-        </style>
-        <div class="carousel">
-          <div class="carousel-container"></div>
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
-        </div>
-      </template>
+<body>
 
-      <carousel-element
-        slides='[
+  <nav>
+    <!--Inicio: Custom Element (Menu) -->
+    <header-container access-button-text="Clientes" logo-src="../assets/img/logo.png"
+    menu-items='[
+    {"text": "Inicio", "link": "home.html"},
+    {"text": "Iniciar sesión", "link": "login.html"},
+    {"text": "Cuenta", "link": "acount.html"}
+  ]'>
+    </header-container>
+    <!--Fin: Custom Element (Menu) -->
+  </nav>
+
+  <main>
+    <!--Inicio: HTML Template (Carrusel) -->
+    <template id="carousel-template">
+      <style>
+        @import url("../css/home.css");
+      </style>
+      <div class="carousel">
+        <div class="carousel-container"></div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </template>
+
+    <carousel-element slides='[
       {"image": "../assets/img/img_1.jpg", "caption": "GANA un bono de $10.000 gracias a los envíos de dinero de tu familia en el exterior."},
       {"image": "../assets/img/img_2.jpg", "caption": "¡Un precio bajo y fijo para siempre! Descubre nuestro Seguro de Salud."},
       {"image": "../assets/img/img_3.webp", "caption": "Tu dinero está disponible cuando quieras"}
-    ]'
-      ></carousel-element>
-      <!--Fin: HTML Template (Carrusel) -->
-      
-      <!--Inicio: Shadow DOM (tarjeta) -->
-        
-      <!--Fin: HTML Shadow Dom (tarjeta) -->
-      </main>
+    ]'></carousel-element>
+    <!--Fin: HTML Template (Carrusel) -->
+
+    <!--Inicio: HTML Template (tarjeta) -->
+    <div class="container-body">
+      <template id="solucion-card-template">
+        <style>
+          @import url("../css/HTMLTemplateCard.css");
+        </style>
+        <div class="card">
+          <img src="" alt="" />
+          <div class="card-title"></div>
+          <div class="card-description"></div>
+          <a href="#" class="card-link"></a>
+        </div>
+      </template>
+
+      <div class="container-card">
+        <div class="title">Soluciones en línea</div>
+        <div class="subtitle">Todo lo que necesitas sin salir de casa.</div>
+        <div class="carousel-card">
+          <solucion-card icono="../assets/icons/flexible_icon.svg" titulo="Inversiones"
+            descripcion="Simula tu inversión con un mejor interés en línea." link="#"
+            link-texto="Simular inversión"></solucion-card>
+          <solucion-card icono="../assets/icons/credito.svg" titulo="Préstamo"
+            descripcion="Solicita tu préstamo y obtén una respuesta inmediata." link="#"
+            link-texto="Solicitar préstamo"></solucion-card>
+          <solucion-card icono="../assets/icons/tarjeta-de-credito.svg" titulo="Tarjeta de crédito"
+            descripcion="Solicita tu nueva tarjeta en pocos pasos." link="#"
+            link-texto="Solicitar tarjeta"></solucion-card>
+          <solucion-card icono="../assets/icons/seguro-de-vida.svg" titulo="Seguro"
+            descripcion="Obtén el mejor seguro para ti y tu familia." link="#"
+            link-texto="Contratar seguro"></solucion-card>
+          <solucion-card icono="../assets/icons/credito-hipotecario.png" titulo="Asesoría"
+            descripcion="Asesoría personalizada para tus finanzas." link="#"
+            link-texto="Solicitar asesoría"></solucion-card>
+          <solucion-card icono="../assets/icons/tarjeta-de-credito.svg" titulo="Pagos en línea"
+            descripcion="Realiza todos tus pagos desde casa." link="#" link-texto="Pagar ahora"></solucion-card>
+        </div>
+        <div class="carousel-controls">
+          <button class="control" onclick="scrollCarousel('left')"><i class="fas fa-chevron-left"></i></button>
+          <button class="control" onclick="scrollCarousel('right')"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <!--Fin: HTML Template (tarjeta) -->
 
 
-    <script
-      src="../components/Jeyner_Manzaba/CustomELementsMenu.js"
-      type="module"
-    ></script>
-    <script
-      src="../components/Jeyner_Manzaba/ShadowDOMCard.js"
-      type="module"
-    ></script>
-    <script
-      src="../components/Jeyner_Manzaba/HTMLTemplateCarrousel.js"
-      type="module"
-    ></script>
-  </body>
+    <!--Fin: HTML Template (tarjeta) -->
+    <div class="img-j">
+      <div class="text-j">
+        <h2>¡2 increíbles opciones para hacer crecer tu dinero!</h2>
+        <p>Te ayudamos a elegir la que más te convenga</p>
+        <button-help text="Ayúdame" url="#"></button-help>
+      </div>
+    </div>
+    <!--Fin: HTML Template (tarjeta) -->
+
+    <!--Inicio: Shadow DOM (tarjeta) -->
+    <div class="cards-container">
+      <card-component title="Certificados bancarios"
+        description="Obtén un documento certificado de tus cuentas y productos contratados."
+        image="../assets/icons/tarjeta-de-credito.svg">
+      </card-component>
+      <card-component title="Simulador de créditos"
+        description="Implementamos prácticas de cultivo respetuosas con el medio ambiente, minimizando el uso de productos químicos."
+        image="../assets/icons/tarjeta-de-credito.svg">
+      </card-component>
+      <card-component title="Innovación"
+        description="Estamos en constante búsqueda de nuevas técnicas y especies que se adapten a las necesidades cambiantes del mercado."
+        image="../assets/icons/tarjeta-de-credito.svg">
+      </card-component>
+    </div>
+    <!--Fin: HTML Shadow Dom (tarjeta) -->
+  </main>
+
+     <!-- Inicio ES Modules -->
+     <footer id="footer"></footer>
+    <!-- Fin ES Modules -->
+
+  <script src="../components/Jeyner_Manzaba/CustomELementsMenu.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/ShadowDOMCard.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/HTMLTemplateCarrousel.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/HTMLTemplateCard.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/CustomELementsButton.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/ESModulesFooter.js" type="module"></script>
+  <script src="../components/Jeyner_Manzaba/footer.js" type="module"></script>
+  <script src="../script/app.js"></script>
+</body>
+
 </html>

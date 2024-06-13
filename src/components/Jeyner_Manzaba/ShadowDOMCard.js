@@ -45,6 +45,7 @@ class CardComponent extends HTMLElement {
             margin: 10px;
             width: 250px;
             vertical-align: top;
+            margin-bottom: 50px;
           }
           .card {
             background-color: #fff;
@@ -60,7 +61,6 @@ class CardComponent extends HTMLElement {
           .image-container {
             width: 100px;
             height: 100px;
-            background-color: #6EA343;
             border-radius: 50%;
             overflow: hidden;
             display: flex;

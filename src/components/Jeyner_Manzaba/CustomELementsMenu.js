@@ -30,7 +30,15 @@ class HeaderContainer extends HTMLElement {
     const accessButtonText = this.getAttribute('access-button-text') || 'Acceso clientes';
     const logoSrc = this.getAttribute('logo-src') || '../assets/img/logo.png';
     const menuItems = this.getAttribute('menu-items') ? JSON.parse(this.getAttribute('menu-items')) : [
-      'Cuentas', 'Tarjetas', 'Créditos', 'Inversiones', 'Servicios', 'Ejemplo'
+      { text: 'Personas', link: '#' },
+      { text: 'Empresas', link: '#' },
+      { text: 'Pymes', link: '#' },
+      { text: 'Microempresarios', link: '#' },
+      { text: 'Cuentas', link: '#' },
+      { text: 'Tarjetas', link: '#' },
+      { text: 'Créditos', link: '#' },
+      { text: 'Inversiones', link: '#' },
+      { text: 'Servicios', link: '#' }
     ];
 
     this.shadowRoot.innerHTML = `
@@ -43,7 +51,7 @@ class HeaderContainer extends HTMLElement {
           <nav id="dropdown-menu" class="hidden">
             <button id="close-menu">&times;</button>
             <ul>
-              ${menuItems.map(item => `<li>${item}</li>`).join('')}
+               ${menuItems.map(item => `<li><a href="${item.link}">${item.text}</a></li>`).join('')}
             </ul>
           </nav>
         </div>
