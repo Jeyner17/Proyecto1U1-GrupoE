@@ -1,3 +1,8 @@
+
+
+
+/* ESMODULO */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -308,6 +313,146 @@ form button:hover {
         max-width: 100%; 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom element*/
+.contenedor-central {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.caja-contenido {
+    display: inline-block;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.contenedor-central .caja-contenido .imagen {
+    width: 100%;
+    height: 350px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/988/584/large_2x/shopping-cartoon-woman-for-sale-concept-vector.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.titulo {
+    font-size: 24px;
+    color: blue;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.parrafo {
+    font-size: 16px;
+    color: #666666;
+    margin: 0 auto;
+    max-width: 400px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Html Template */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+}
+
+h2 {
+    text-align: left;
+    margin-top: 20px;
+    color: blue;
+}
+
+.tabs {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.tablinks {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabcontent {
+    display: none;
+    border-top: 1px solid #ccc;
+}
+
+.accordion {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #ddd;
+}
+
+.panel {
+    padding: 0 10px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
 
 
 
