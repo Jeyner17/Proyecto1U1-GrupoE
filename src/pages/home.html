@@ -8,39 +8,56 @@
   </head>
 
   <body>
-    
-    <!--Inicio: Custom Element (Menu) -->
-    <header-container
-      access-button-text="Clientes"
-      logo-src="../assets/img/logo.png"
-      menu-items='["Inicio", "Servicios", "Contacto", "Sobre Nosotros"]'
-    >
-    </header-container>
-    <!--Fin: Custom Element (Menu) -->
+    <nav>
+      <!--Inicio: Custom Element (Menu) -->
+      <header-container
+        access-button-text="Clientes"
+        logo-src="../assets/img/logo.png"
+        menu-items='["Inicio", "Servicios", "Contacto", "Sobre Nosotros"]'
+      >
+      </header-container>
+      <!--Fin: Custom Element (Menu) -->
+    </nav>
 
-    <!--Inicio: HTML Template (Carrusel) -->
-    <template id="carousel-template">
-      <style>
-        @import url('../css/home.css');
-      </style>
-      <div class="carousel">
-        <div class="carousel-container"></div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-    </template>
+    <main>
+      <!--Inicio: HTML Template (Carrusel) -->
+      <template id="carousel-template">
+        <style>
+          @import url("../css/home.css");
+        </style>
+        <div class="carousel">
+          <div class="carousel-container"></div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </template>
 
-    <carousel-element
-      slides='[
-        {"image": "../assets/img/img_1.jpg", "caption": "GANA un bono de $10.000 gracias a los envíos de dinero de tu familia en el exterior."},
-        {"image": "../assets/img/img_2.jpg", "caption": "¡Un precio bajo y fijo para siempre! Descubre nuestro Seguro de Salud."},
-        {"image": "../assets/img/img_3.webp", "caption": "Tu dinero está disponible cuando quieras"}
-      ]'
-    ></carousel-element>
-    <!--Fin: HTML Template (Carrusel) -->
+      <carousel-element
+        slides='[
+      {"image": "../assets/img/img_1.jpg", "caption": "GANA un bono de $10.000 gracias a los envíos de dinero de tu familia en el exterior."},
+      {"image": "../assets/img/img_2.jpg", "caption": "¡Un precio bajo y fijo para siempre! Descubre nuestro Seguro de Salud."},
+      {"image": "../assets/img/img_3.webp", "caption": "Tu dinero está disponible cuando quieras"}
+    ]'
+      ></carousel-element>
+      <!--Fin: HTML Template (Carrusel) -->
+      
+      <!--Inicio: Shadow DOM (tarjeta) -->
+        
+      <!--Fin: HTML Shadow Dom (tarjeta) -->
+      </main>
 
-    <script src="../components/Jeyner_Manzaba/CustomELementsMenu.js" type="module"></script>
-    <script src="../components/Jeyner_Manzaba/ShadowDOMCard.js" type="module"></script>
-    <script src="../components/Jeyner_Manzaba/HTMLTemplateCarrousel.js" type="module"></script>
+
+    <script
+      src="../components/Jeyner_Manzaba/CustomELementsMenu.js"
+      type="module"
+    ></script>
+    <script
+      src="../components/Jeyner_Manzaba/ShadowDOMCard.js"
+      type="module"
+    ></script>
+    <script
+      src="../components/Jeyner_Manzaba/HTMLTemplateCarrousel.js"
+      type="module"
+    ></script>
   </body>
 </html>
