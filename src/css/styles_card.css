@@ -1,6 +1,6 @@
 .container-card {
     text-align: center;
-    background-color: #7fcda292;
+    background-color: #d8d8d892;
     padding: 10px;
     border-radius: 8px;
     width: 100%;
@@ -17,7 +17,7 @@
 
 .subtitle {
     font-size: 16px;
-    color: #666;
+    color: white;
     margin-bottom: 20px;
 }
 

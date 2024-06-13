@@ -3,11 +3,9 @@ export const footerTemplate = `
     <div class="column">
       <h3>Enlaces Útiles</h3>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Sucursales</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="../pages/home.html">Inicio</a></li>
+        <li><a href="../pages/login.html">Iniciar sesión</a></li>
+        <li><a href="../pages/acount.html">Cuenta</a></li>
       </ul>
     </div>
     <div class="column">
