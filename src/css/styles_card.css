@@ -23,9 +23,43 @@
 
 .carousel-card {
     display: flex;
-    overflow-x: hidden; 
+    justify-content: center; /* Centrar las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    overflow-x: auto; 
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
+.card {
+    background-color: #ffffffbb;
+    border: 1px solid #dee3ed;
+    border-radius: 8px;
+    width: 180px;
+    height: 400px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.card img {
+    width: 178px;
+    height: 190px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    color: #2c2c30;
+    font-family: "prelo-semibold";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #6e6e73;
+    margin-bottom: 10px;
+    font-family: "prelo-medium";
+    font-style: normal;
+}
